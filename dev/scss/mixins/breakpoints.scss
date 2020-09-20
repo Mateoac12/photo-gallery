@@ -1,0 +1,30 @@
+/* variables de tamagno de pantalla */
+$mobile: 360px;
+$tablet: 361px;
+$laptop: 1024px;
+$desktop: 1400px;
+
+/* Esto son funciones en SCSS. y  su content corresponde al espacio de codigo que voy a rellenar cuando llame esta funcion */
+@mixin mobile {
+    @media screen and (max-width: $mobile){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $tablet){
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (min-width: $laptop){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $desktop){
+        @content;
+    }
+}

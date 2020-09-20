@@ -1,0 +1,30 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60vw;
+    position: fixed;
+    top: 0;
+    /* Estas dos cosas se hacen para centrar el elemento y que no salga para afuera del contenido */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #777;
+    height: 50px;
+
+    &__icon {
+        width: 90px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    @include laptop {
+        height: 60px;
+        left: 100%;
+        transform: translateX(-100%);
+        width: 20vw;
+    }
+
+    @include desktop {
+        width: 15vw;
+    }
+}
