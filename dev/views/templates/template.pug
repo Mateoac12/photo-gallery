@@ -1,3 +1,4 @@
+include ../config/config
 <!DOCTYPE html>
 html(lang="eu")
     head
@@ -9,12 +10,24 @@ html(lang="eu")
     body
         header#header.header
             .topbar
+                a(href="/").logo
+                    img(src="assets/img/logo.png", alt="web logo")
                 .topbar__icon
                     i.fas.fa-user
                     span Log in
                 .topbar__icon
                     i.fas.fa-user-plus
                     span Register
-        aside#sidebar.sidebar aside
+                .toggle-menu
+                    #toggle-menu.toggle-menu__icon
+                        .first-bar
+                        .second-bar
+                        .third-bar
+        aside#sidebar.sidebar
+            a(href="/").logo
+                img(src="assets/img/logo.png", alt="web logo")
+            block menu
+            //.aboutme
         main.main main
         main#footer.footer footer
+        script(src="js/scripts-min.js")

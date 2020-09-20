@@ -1,7 +1,27 @@
 .sidebar {
+
+    z-index: 80;
+    & .logo {
+        display: none;
+    }
+
     @include laptop {
-        background-color: tomato;
+        display: block;
         grid-column: 1 / 2;
         grid-row: 1 / -1;
+
+        display: grid;
+        grid-template-rows: 1fr 70vh 1fr;
+
+        & .logo {
+            display: inline;
+            display: flex;
+            & img {
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+            }
+        }
+
     }
 }

@@ -1,0 +1,28 @@
+.toggle-menu {
+    height: 50px;
+    width: 50px;
+
+    
+    &__icon {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        height: 50px;
+        width: 50px;
+        padding: 5px;
+
+        & .first-bar,
+        & .second-bar,
+        & .third-bar {
+            align-self: center;
+            justify-content: center;
+            height: 4px;
+            background-color: #ccc;
+            border-radius: 5px;
+        }
+    }
+
+    @include laptop {
+        display: none;
+    }
+}

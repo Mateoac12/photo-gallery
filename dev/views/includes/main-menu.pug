@@ -1,0 +1,8 @@
+#main-nav
+    ul#main-menu.main-menu
+        each page, value in pages
+            li.main-menu__item
+                if (value == 0)
+                    a(href="/")= page
+                else
+                    a(href=`/${page}.html`)= page

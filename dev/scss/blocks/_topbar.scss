@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 60vw;
+    width: 100vw;
     position: fixed;
     top: 0;
     /* Estas dos cosas se hacen para centrar el elemento y que no salga para afuera del contenido */
@@ -10,6 +10,7 @@
     transform: translateX(-50%);
     background-color: #777;
     height: 50px;
+    z-index: 50;
 
     &__icon {
         width: 90px;
@@ -18,6 +19,7 @@
     }
 
     @include laptop {
+        background-color: transparent;
         height: 60px;
         left: 100%;
         transform: translateX(-100%);
