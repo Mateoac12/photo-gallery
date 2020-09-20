@@ -1,4 +1,4 @@
-## Galeria de fotos (mini-serie de Dorian Designs [youtube])
+## Galeria de fotos
 
 Tecnologias:
 
@@ -6,3 +6,5 @@ Tecnologias:
 * Pug
 * SCSS
 * Font Awesome
+
+Mini-serie web by Dorian Design
