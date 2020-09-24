@@ -1,6 +1,6 @@
 .main-menu {
     @include reset-list;
-    background-color: #777;
+    background-color: $dark-color-2;
     display: flex;
     position: fixed;
     top: 50px;
@@ -36,10 +36,11 @@
     & a {
         text-decoration: none;
         text-transform: uppercase;
-        color: white;
+        color: $text-color;
     }
 
     &.show {
         transform: translateY(0);
     }
+
 }

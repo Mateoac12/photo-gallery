@@ -1,11 +1,19 @@
 /* Aqui es donde se va a importar todos los documentos ya que es el que se va a utilizar */
 
+// Configuracion guias de estilo
+@import 'config/colors';
+@import 'config/fonts';
+
+
+// Mixins
 @import 'mixins/breakpoints';
 @import 'mixins/reset-list';
 
+// Estilos Base
 @import 'base/normalize';
 @import 'base/base';
 
+// Bloques
 @import 'blocks/header';
 @import 'blocks/topbar';
 @import 'blocks/logo';

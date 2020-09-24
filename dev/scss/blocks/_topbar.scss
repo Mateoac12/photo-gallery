@@ -8,11 +8,12 @@
     /* Estas dos cosas se hacen para centrar el elemento y que no salga para afuera del contenido */
     left: 50%;
     transform: translateX(-50%);
-    background-color: #777;
+    background-color: $dark-color;
     height: 50px;
     z-index: 50;
 
     &__icon {
+        color: $text-color;
         width: 90px;
         display: flex;
         justify-content: space-around;
