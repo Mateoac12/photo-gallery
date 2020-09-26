@@ -1,5 +1,7 @@
 .sidebar {
-
+    & h1 {
+        display: none;
+    }
     z-index: 80;
     & .logo {
         display: none;

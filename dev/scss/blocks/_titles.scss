@@ -1,0 +1,10 @@
+.title {
+    color: $text-color;
+    margin: 2rem 1rem 1rem;
+    border-bottom: 1px solid $text-color;
+
+    @include laptop {
+        margin-top: .5rem;
+        padding-bottom: .5rem;
+    }
+}

@@ -9,13 +9,13 @@ html(lang="eu")
         link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous")
     body
         header#header.header
-            .topbar
+            #topbar.topbar
                 a(href="/").logo
                     img(src="assets/img/logo.png", alt="web logo")
-                .topbar__icon
+                .topbar__icon(data-type="login")
                     i.fas.fa-user
                     span Log in
-                .topbar__icon
+                .topbar__icon(data-type="register")
                     i.fas.fa-user-plus
                     span Register
                 .toggle-menu
@@ -28,6 +28,10 @@ html(lang="eu")
                 img(src="assets/img/logo.png", alt="web logo")
             block menu
             //.aboutme
-        main.main main
-        main#footer.footer footer
+        main.main
+            block title
+            block main
+        include ../includes/login-modal
+        include ../includes/register-modal
+        footer#footer.footer footer
         script(src="js/scripts-min.js")

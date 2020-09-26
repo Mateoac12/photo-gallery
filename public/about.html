@@ -9,9 +9,9 @@
   </head>
   <body>
     <header class="header" id="header">
-      <div class="topbar"><a class="logo" href="/"><img src="assets/img/logo.png" alt="web logo"/></a>
-        <div class="topbar__icon"><i class="fas fa-user"></i><span>Log in</span></div>
-        <div class="topbar__icon"><i class="fas fa-user-plus"></i><span>Register</span></div>
+      <div class="topbar" id="topbar"><a class="logo" href="/"><img src="assets/img/logo.png" alt="web logo"/></a>
+        <div class="topbar__icon" data-type="login"><i class="fas fa-user"></i><span>Log in</span></div>
+        <div class="topbar__icon" data-type="register"><i class="fas fa-user-plus"></i><span>Register</span></div>
         <div class="toggle-menu">
           <div class="toggle-menu__icon" id="toggle-menu">
             <div class="first-bar"></div>
@@ -32,10 +32,47 @@
           </li>
         </ul>
       </div>
+      <h1 class="title">About</h1>
       <!--.aboutme-->
     </aside>
-    <main class="main">main</main>
-    <main class="footer" id="footer">footer</main>
+    <main class="main">
+      <h1 class="title">About</h1>
+    </main>
+    <div class="lightbox" id="login-modal">
+      <form class="form" id="login-form">
+        <div class="form__field">
+          <label class="form__label" for="login-email">Email</label>
+          <input class="form__input" type="email" name="email" id="login-email"/>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="form-password">Password</label>
+          <input class="form__input" type="password" name="password" id="form-password"/>
+        </div>
+        <div class="form__field">
+          <input class="form__submit" type="submit" value="Send"/>
+        </div>
+      </form>
+    </div>
+    <div class="lightbox" id="register-modal">
+      <form class="form" id="register-form">
+        <div class="form__field">
+          <label class="form__label" for="register-email">Email</label>
+          <input class="form__input" type="email" name="email" id="register-email"/>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="register-password">Password</label>
+          <input class="form__input" type="password" name="password" id="register-password"/>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="register-password-2">Repeat password</label>
+          <input class="form__input" type="password" name="password-2" id="register-password-2"/>
+        </div>
+        <div class="form__field">
+          <input class="form__submit" type="submit" value="Register"/>
+        </div>
+      </form>
+    </div>
+    <footer class="footer" id="footer">footer</footer>
     <script src="js/scripts-min.js"></script>
   </body>
 </html>
