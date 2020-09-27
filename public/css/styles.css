@@ -118,7 +118,7 @@ template { display: none; }
 /** Add the correct display in IE 10. */
 [hidden] { display: none; }
 
-body { background-color: var(--background-color); color: var(--dark-color-2); height: 100vh; font-family: "Cabin", "sans-serif"; }
+body { background-color: var(--background-color); color: var(--text-color); min-height: 100vh; font-family: "Cabin", "sans-serif"; }
 
 @media screen and (min-width: 1024px) { body { display: grid; grid-template-columns: 15% 85%; grid-template-rows: 60px 1fr 1rem; } }
 
@@ -161,7 +161,7 @@ body { background-color: var(--background-color); color: var(--dark-color-2); he
 .sidebar .logo { display: none; }
 
 @media screen and (min-width: 1024px) { .sidebar { display: block; grid-column: 1 / 2; grid-row: 1 / -1; display: grid; grid-template-rows: 1fr 70vh 1fr; }
-  .sidebar .logo { display: inline; display: flex; }
+  .sidebar .logo { position: fixed; width: 15%; height: 32%; display: flex; }
   .sidebar .logo img { align-items: center; justify-content: center; width: 100px; } }
 
 .main-menu { list-style: none; padding-left: 0; margin-top: 0; margin-bottom: 0; background-color: var(--dark-color-2); display: flex; position: fixed; top: 50px; transform: translateY(-100%); z-index: 100; width: 100%; height: 100%; flex-direction: column; justify-content: center; transition: transform .5s; z-index: 1; }
@@ -179,6 +179,10 @@ body { background-color: var(--background-color); color: var(--dark-color-2); he
 .lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.5); z-index: 1000; transform: scale(0); transition: transform .3s; }
 
 .lightbox--show { transform: scale(1); }
+
+.main .gallery { margin: 20px; }
+
+.main .gallery_item img { border-radius: .25rem; }
 
 @media screen and (min-width: 1024px) { .main { background-color: var(--dark-color); grid-column: 2 / -1; grid-row: 2 / -1; } }
 
@@ -199,3 +203,13 @@ body { background-color: var(--background-color); color: var(--dark-color-2); he
 .title { color: var(--text-color); margin: 2rem 1rem 1rem; border-bottom: 1px solid var(--text-color); }
 
 @media screen and (min-width: 1024px) { .title { margin-top: .5rem; padding-bottom: .5rem; } }
+
+@media screen and (min-width: 1024px) { .about { box-sizing: border-box; position: relative; height: 420px; }
+  .about__img, .about__text { padding: 10px; position: absolute; top: 20px; width: 50%; opacity: 0; transition: opacity .5s; }
+  .about__img { left: 0; }
+  .about__text { left: 50%; font-size: 1.5rem; }
+  .about__text h2 { margin-top: 0; } }
+
+.controls { font-size: 1.10rem; width: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: space-around; }
+
+.show { opacity: 1; }

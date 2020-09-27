@@ -1,4 +1,12 @@
 .main {
+    & .gallery {
+        margin: 20px;
+
+        &_item img{
+            border-radius: .25rem;
+        }
+    }
+
     @include laptop {
         background-color: $dark-color;
         grid-column: 2 / -1;

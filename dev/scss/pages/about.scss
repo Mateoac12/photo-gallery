@@ -1,0 +1,43 @@
+.about {
+    @include laptop {
+        box-sizing: border-box;
+        position: relative;
+        height: 420px;
+
+        &__img,
+        &__text {
+            padding: 10px;
+            position: absolute;
+            top: 20px;
+            width: 50%;
+
+            opacity: 0;
+            transition: opacity .5s;
+        }
+
+        &__img {
+            left: 0;
+        }
+
+        &__text {
+            left: 50%;
+            font-size: 1.5rem;
+
+            & h2 {
+                margin-top: 0;
+            }
+        }
+    }
+}
+.controls {
+    font-size: 1.10rem;
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.show {
+    opacity: 1;
+}

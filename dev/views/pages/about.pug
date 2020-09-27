@@ -3,3 +3,19 @@ block menu
     include ../includes/main-menu
     block title
         h1.title About
+
+block main
+    .about
+        .about__img.show
+            img(src="assets/img/about.jpg", alt="Image about 1")
+        .about__text.show
+            h2 Title 1
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequuntur ipsum vitae magnam vero voluptatem officia eveniet odio porro animi, reprehenderit voluptates, consequatur inventore quae qui id ad quam fugit.
+        .about__img
+            img(src="assets/img/about2.jpg", alt="Image about 2")
+        .about__text
+            h2 Title 2
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste consequuntur ipsum vitae magnam vero voluptatem officia eveniet odio porro animi, reprehenderit voluptates, consequatur inventore quae qui id ad quam fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas molestiae esse alias earum inventore cupiditate totam, rem exercitationem dolore reiciendis eos qui et iure deleniti nemo incidunt, explicabo quidem minima!
+    .controls
+        i.fas.fa-chevron-circle-left#prev
+        i.fas.fa-chevron-circle-right#next
