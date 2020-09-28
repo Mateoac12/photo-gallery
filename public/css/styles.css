@@ -200,9 +200,30 @@ body { background-color: var(--background-color); color: var(--text-color); min-
 
 .form__submit:active { transform: scale(0.9); }
 
+.contact-form { display: grid; gap: 30px; margin: 0 auto; }
+
+@media screen and (min-width: 1024px) { .contact-form { grid-template-columns: repeat(2, 1fr); width: 50%; } }
+
+.contact-form__fields { display: flex; flex-direction: column; height: 200px; justify-content: space-between; }
+
+.contact-form__input, .contact-form__textarea { background: none; color: var(--text-color); border: 1px solid; padding-left: .5rem; outline: none; height: 40px; }
+
+.contact-form__textarea { padding: .5rem; margin-bottom: 1.5rem; height: 200px; width: 100%; resize: none; }
+
 .title { color: var(--text-color); margin: 2rem 1rem 1rem; border-bottom: 1px solid var(--text-color); }
 
 @media screen and (min-width: 1024px) { .title { margin-top: .5rem; padding-bottom: .5rem; } }
+
+.social { width: 80%; bottom: 2rem; display: flex; justify-content: space-between; position: absolute; height: 2em; /* para centrar elementos cuando estoy en position absolute */ left: 50%; transform: translateX(-50%); /* para que los elementos dentro del contenido no salgan de la caja */ overflow: hidden; }
+
+@media screen and (min-width: 1024px) { .social { width: 30%; } }
+
+.social__icon { display: flex; flex-direction: column; font-size: 2rem; cursor: pointer; transition: transform .3s; }
+
+.social__icon i { align-self: center; }
+
+@media screen and (min-width: 1024px) { .social__icon:hover { transform: translateY(-100%); }
+  .social__icon:hover i:nth-child(2) { color: var(--primary-color); } }
 
 @media screen and (min-width: 1024px) { .about { box-sizing: border-box; position: relative; height: 420px; }
   .about__img, .about__text { padding: 10px; position: absolute; top: 20px; width: 50%; opacity: 0; transition: opacity .5s; }
@@ -210,6 +231,12 @@ body { background-color: var(--background-color); color: var(--text-color); min-
   .about__text { left: 50%; font-size: 1.5rem; }
   .about__text h2 { margin-top: 0; } }
 
-.controls { font-size: 1.10rem; width: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: space-around; }
+.controls { display: none; }
+
+@media screen and (min-width: 1024px) { .controls { font-size: 1.10rem; width: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: space-around; } }
 
 .show { opacity: 1; }
+
+.contact { background-color: var(--dark-color); margin: 1rem; padding: 2rem; height: 90vh; text-align: center; position: relative; }
+
+@media screen and (min-width: 1024px) { .contact { height: 80vh; } }

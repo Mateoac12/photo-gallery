@@ -1,5 +1,29 @@
 extends ../templates/template
 block menu
     include ../includes/main-menu
-    block title
-        h1.title Contact
+block title
+    h1.title Contact
+block main
+    .contact
+        form.contact-form
+            .contact-form__fields
+                input(type="text" name="name" placeholder="name").contact-form__input
+                input(type="email" name="email" placeholder="email").contact-form__input
+                input(type="text" name="subject" placeholder="subject").contact-form__input
+            .contact-form__field
+                textarea(name="message" placeholder="message").contact-form__textarea
+        .contact-form__field
+            input(type="submit", value="Send").form__submit
+        .social
+            .social__icon
+                i.fab.fa-twitter-square
+                i.fab.fa-twitter-square
+            .social__icon
+                i.fab.fa-instagram
+                i.fab.fa-instagram
+            .social__icon
+                i.fab.fa-youtube-square
+                i.fab.fa-youtube-square
+            .social__icon
+                i.fab.fa-pinterest-square
+                i.fab.fa-pinterest-square

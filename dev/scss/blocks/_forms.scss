@@ -41,3 +41,39 @@
         transform: scale(.9);
     }
 }
+
+.contact-form {
+    display: grid;
+    gap: 30px;
+    margin: 0 auto;
+
+    @include laptop {
+        grid-template-columns: repeat(2, 1fr);
+        width: 50%;
+    }
+
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        justify-content: space-between;
+    }
+
+    &__input,
+    &__textarea {
+        background: none;
+        color: $text-color;
+        border: 1px solid;      // cuando no especificamos el color de borde lo toma automaticamente del color del texto
+        padding-left: .5rem;
+        outline: none;
+        height: 40px;
+    }
+
+    &__textarea {
+        padding: .5rem;
+        margin-bottom: 1.5rem;
+        height: 200px;
+        width: 100%;
+        resize: none;
+    }
+}
